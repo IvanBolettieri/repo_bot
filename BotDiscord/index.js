@@ -1,10 +1,15 @@
+// istanzio il nome
 const Discord = require('discord.js');
+//istanzio il client
 const client = new Discord.Client({
     intents: ["GUILDS", "GUILD_MEMBERS", "GUILD_MESSAGES", "GUILD_VOICE_STATES"] //Aggiungere GUILD_VOICE_STATES
 })
 
+//chiave di accesso fornita dal sito per creare i bot di discord
 client.login("MTA5MDYyMTYzNTMxNDMyMzU0Nw.GiUUQX.c8V7KhiG_PID9ntzYMGqAlP89r-E11YcgBT4Ho");
 
+
+//check per 
 client.on("ready", () => {
     console.log("ONLINE");
 })
@@ -116,7 +121,7 @@ client.on("messageCreate", message => {
 
         let embed = new Discord.MessageEmbed()
             .addField("Queue", songsList)
-            .setFooter({ text: `Page ${page}/${totPage}` })
+            .setFooter(`Page ${page}/${totPage}`)
 
         let button1 = new Discord.MessageButton()
             .setLabel("Indietro")
@@ -162,7 +167,7 @@ client.on("messageCreate", message => {
 
                     let embed = new Discord.MessageEmbed()
                         .addField("Queue", songsList)
-                        .setFooter({ text: `Page ${page}/${totPage}` })
+                        .setFooter(`Page ${page}/${totPage}`)
 
                     let button1 = new Discord.MessageButton()
                         .setLabel("Indietro")
