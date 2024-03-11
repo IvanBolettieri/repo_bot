@@ -10,7 +10,7 @@ const client = new Discord.Client({
 client.login("MTA5MDYyMTYzNTMxNDMyMzU0Nw.GiUUQX.c8V7KhiG_PID9ntzYMGqAlP89r-E11YcgBT4Ho");
 
 
-//check per 
+//check per vedere se è online 
 client.on("ready", () => {
     console.log("ONLINE");
 })
@@ -27,7 +27,7 @@ const distube = new DisTube(client, {
     plugins: [new SpotifyPlugin(), new SoundCloudPlugin()],
     leaveOnEmpty: true,
     leaveOnStop: true
-})
+});
 
 // setto il messaggio !play usato per far partire il comanndo play
 client.on("messageCreate", message => {
